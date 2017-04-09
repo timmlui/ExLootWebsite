@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!-- <meta name="author" content="Benett Axtell"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="info.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Info & post</title>
+	</head>
+	<body>
+		<head>
+        <title>ExLoot</title>
+        <link rel="stylesheet" href="homepage.css">
+    </head>
+
+        <header class="col-12 header"> 
+<a class="title col-2" onclick="home()"><h2>ExLoot</h2></a>
+            <div class="col-7">
+                <button id="searchButton" type="button" class="col-2">Search</button>
+                <form id="searchBar" class="col-10">
+                    <input background-image="pics/search.png" type="text" name="search" placeholder="Search..">
+                </form>
+            </div>
+              
+            <nav class="col-3 account">
+               <ul>
+                  <li class="col-8 dropdown">
+                                                <a href="#" class="dropbtn">My Account</a>
+                        <div class="dropdown-content">
+                    <div id="but_edit_profie" class="hidden">
+                          <a class="col-12" class="hidden" >Edit Profile</a>
+                      </div>
+                    <div id="but_user_history" class="hidden">
+                          <a class="col-12" class="hidden" >History</a>
+                        </div>
+                    <div id="but_user_info" class="hidden">
+                          <a class="col-12" id="but_user_info" class="hidden" >Information</a>
+                      </div>
+                    <div id="but_log_in" class="hidden">
+                          <a class="col-12" id="but_log_in" class="hidden" >Log in</a>
+                        </div>
+                    <div id="but_log_out" class="hidden">
+                          <a class="col-12"  class="hidden"> Log Out</a>
+                        </div>
+                        </div>
+                        
+                  </li>
+                  <div id="new_post" class="hidden">
+                  <li class="col-4"><a href="newpost.html">Post</a></li>
+              </div>
+                </ul>
+            </nav>
+        </header>
+        <div class="col-12"> 
+          <img class='profile_pic col-3 col-m-3' alt='Photo' src='pics/12.png'/>
+          <section class='col-6 col-m-6'>
+            <p class="info" id="show_username">User Name: </p>
+            <p class="info" id="show_email">Email Address: </p>
+            <p class="info" id="show_telephone">Telephone: </p>
+            <p class="info" id="show_rating">Rating: </p>
+          </section>
+        </div>
+        <hr/>
+        <div class="col-12 posts">
+          <h3> User's All Posts</h3>
+        </div>
+        <div class="col-12 filter_bar">
+          <div class="col-6 opt"> Sort By
+            <select name="sortByName" id="SortFiled" tabindex="-1">
+              <option value="1" >Newest First</option>
+              <option value="2" s>Oldest First</option>
+              <option value="3" >Lowest Price</option>
+              <option value="4" selected>Highest Price</option>
+            </select>
+            <input type="button" id="show_posts" value="Show Posts"/>
+          </div>
+        </div>
+		<div class="col-12" id="display_posts"></div>
+    <link rel="stylesheet" type="text/css" href="info.css" media="screen" />
+  </body>
+  </html>

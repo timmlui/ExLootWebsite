@@ -1,0 +1,194 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="description.js"></script>
+    <title>ExLoot_Des</title>
+    <link rel="stylesheet" href="description.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <section class="item's_description col-12">
+        <!-- Menu Bar -->
+    <header class="header col-12">
+
+<a class="title col-2" onclick="home()"><h2>ExLoot</h2></a>
+      <div class="col-7">
+        <button class="searchButton col-2 fa fa-search" type="button" id="search"></button>
+        <form class="searchBar col-10">
+          <input src="js2.js" type="text" id="keyword" placeholder="Search...">
+        </form>
+      </div>
+          
+      <nav class="col-3 account">
+        <ul>
+          <li class="col-8 dropdown">
+
+           <a href="#" class="dropbtn">My Account</a>
+                        <div class="dropdown-content">
+                    <div id="but_edit_profie" class="hidden">
+                          <a class="col-12" class="hidden" >Edit Profile</a>
+                      </div>
+                    <div id="but_user_history" class="hidden">
+                          <a class="col-12" class="hidden" >History</a>
+                        </div>
+                    <div id="but_user_info" class="hidden">
+                          <a class="col-12" id="but_user_info" class="hidden" >Information</a>
+                      </div>
+                    <div id="but_log_in" class="hidden">
+                          <a class="col-12" id="but_log_in" class="hidden" >Log in</a>
+                        </div>
+                    <div id="but_sign_up" class="hidden">
+                          <a class="col-12" id="but_sign_up" class="hidden" >sign up</a>
+                        </div>
+                    <div id="but_log_out" class="hidden">
+                          <a class="col-12"  class="hidden"> Log Out</a>
+                        </div>
+                        </div>
+                        
+                  </li>
+                  <div id="new_post" class="hidden">
+                  <li class="col-4"><a class="col-4 postbtn" onclick="newPost()">Post</a></li>
+              </div>
+        </ul>
+      </nav>
+    </header>
+        <!-- Title -->
+        <article class="item's_title" id="title">
+            <h1 id="show_title"></h1>
+        </article>
+
+        <!-- Brief Description -->
+        <div class="container">
+            <div class="imgs">
+                <section>
+                    <img id="mySlides" class="mySlides" src="pics/13.jpg">
+                </section>
+            </div>
+            <div class="imgDes">
+                <i id="icon_date" class="fa fa-calendar"></i>
+                <p id="show_post_date">Post Date: </p>
+                <i id="price" class="fa fa-money"></i>
+                <p id="show_post_price">Price: </p>
+                <i id="icon_location" class="fa fa-location-arrow"></i>
+                <p id="show_post_location">Location: </p>
+                <i id="icon_category" class="fa fa-shopping-bag"></i>
+                <p id="show_post_category">Category: </p>
+            </div>
+        </div>
+
+        <!--Full Description-->
+        <div id="full_description">
+            <!--Item's Description-->
+            <article class="item's description" , id="description">
+                <h2>Item's Description:</h2>
+                <p id="show_post_description"></p>
+            </article>
+        </div>
+
+        <!--INFO-->
+        <div class="container_2">
+            <div id="info">
+                <!--Owner's info-->
+                <div class="owner info" , id="owner">
+                    <h3>About the seller</h3>
+                    <p id="show_owner_name"></p>
+                    <div id="owner_bi">
+                        <i class="fa fa-address-card-o" style="font-size:30px;"></i>
+                        <button type="info" class="info_butt" id="seller_info">View seller's info</button>
+                    </div>
+                </div>
+                <!--Owner's contact-->
+                <div class="contact info" , id="contact">
+                    <h3>Contact Seller</h3>
+
+                    <div id="contact_input">
+                        <input id="input_email" type="password" placeholder="Your email" name="name" required>
+
+                        <input id="input_msg" type="text" placeholder="Message" name="msg" required>
+                    </div>
+
+                    <input type='button' id="send_email" value="Send Email" />
+                    <p>*Note: If you wish to contact seller via SMS/phone-call, please ignore the above contact section.</p>
+                    <div id="confirm" class="hidden">
+                    <input type='button' id="confirm_buy" class="hidden" value="Confirm Purchase" />
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div id="footer" class="footer col-12">
+
+            <div class="part col-2"></div>
+
+            <div class="part col-2">ExLoot Information
+                <ul>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy Poilicy</a></li>
+                    <li><a href="#">Posting Policy</a></li>
+                    <li><a href="#">Advertise with Us</a></li>
+                    <li><a href="#">AdChoice</a></li>
+                </ul>
+            </div>
+
+            <div class="part col-2">ExLoot Support
+                <ul>
+                    <li><a href="#">Help Desk</a></li>
+                    <li><a href="#">Online Safety Tips</a></li>
+                    <li><a href="#">Price Checker</a></li>
+                </ul>
+            </div>
+
+            <div class="part col-2">Explore ExLoot
+                <ul>
+                    <li><a href="#">About ExLoot</a></li>
+                    <li><a href="#">ExLoot Central</a></li>
+                    <li><a href="#">ExLoot Member Benefits</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+
+            <div class="part col-2">Frequently Asked Questions
+                <ul>
+                    <li><a href="#">How do I get more ad views?</a></li>
+                    <li><a href="#">Where is my ExLoot Ad? I can't find it.</a></li>
+                    <li><a href="#">How can I change my Ad?</a></li>
+                    <li><a href="#">How do I delete my Ad?</a></li>
+                </ul>
+            </div>
+
+            <div class="part col-2"></div>
+
+        </div>
+    </section>
+
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = x.length
+            }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+      <meta charset="UTF-8">
+      <meta name = "viewport" content = "width=device-width, initial-scale=1">
+      <title>ExLoot_Log</title>
+      <link rel="stylesheet" href="login.css">
+    </head>
+    <body>
+        <section class = "item's_description col-12">
+            <!-- Menu Bar -->
+            <header class="header col-12">
+
+<a class="title col-2" href="homepage.html"><h2>ExLoot</h2></a>
+              <div class="col-7">
+                <button class="searchButton col-2" type="button" >Search</button>
+                <form class="searchBar col-10">
+                  <input background-image="pics/search.png" type="text" name="search" placeholder="Search...">
+                </form>
+              </div>
+
+
+            </header>
+
+            <div class="login">
+                <form action="/login" method="post">
+                      <div class="container">
+                        <label><b>Email</b></label>
+                        <input id="email" type="text" placeholder="Enter Email" name="email" required>
+
+                        <label><b>Password</b></label>
+                        <input id="psw" type="password" placeholder="Enter Password" name="password" required>
+
+                        <button id="login_b" type="submit">Login</button>
+                        <input type="checkbox" checked="checked"> Remember me
+                      </div>
+
+                      <div class="container" style="background-color:#f1f1f1">
+                          <button onclick="location.href='homepage.html'" type="button" class="cancelbtn">Cancel</button>
+                      </div>
+                </form>
+            </div>
+            <script
+                src="https://code.jquery.com/jquery-3.2.1.min.js"
+                integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+                crossorigin="anonymous">
+            </script>
+            <script>
+                $('#login_b').click(function(e){
+                  console.log($("#email").val());
+                  console.log($("#psw").val());
+                     e.preventDefault();
+                     $.ajax({
+                         type:'POST',
+                         url:"/login",
+                         dataType:"json",
+                         contentType: "application/json; charset=utf-8",
+                         data:JSON.stringify({
+                            "email" :$("#email").val(),
+                            "password" :$("#psw").val()
+                         }),
+                         success:function(data){
+                             if(data){
+                                 console.log('SUCCESS');
+                                 var userid = data.userID;
+                                 console.log("sdf:"+userid);
+                                 var url = "homepage.html?userID="+userid;
+                                 window.location.href = url;
+                             } else{
+                                  alert("Login FAILED");
+                             }
+                         },
+                         error:function(error){
+                            alert("Login FAILED");
+                         }
+                     });
+                 })
+            </script>
+    </body>
+</html>

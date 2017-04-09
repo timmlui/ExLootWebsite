@@ -1,0 +1,180 @@
+{
+  "_id": "test1",
+  "category": "electronic",
+  "price": 25,
+  "title": "TV Cable",
+  "imagePath": "/pics/1.jpg",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet tellus velit, ut semper neque.",
+  "location":"toronto",
+  "date":"2016/02/12",
+  "posterID" : 1,
+  "buyerID" : null
+}
+{
+  "_id": "test2",
+  "category": "electronic",
+  "price": 100,
+  "title": "HD Monitor",
+  "imagePath": "/pics/2.jpg",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet tellus velit, ut semper neque.",
+  "location":"mississauga",
+  "date":"2016/02/24",
+  "posterID" : 2,
+  "buyerID" : null
+}
+{
+    "_id": "test3",
+  "category": "tool",
+  "price": 50,
+  "title": "Brightest Flashlight",
+  "imagePath": "/pics/3.jpg",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet tellus velit, ut semper neque.",
+  "location":"scarborough",
+  "date":"2016/03/12",
+  "posterID" : 3,
+  "buyerID" : null
+}
+{
+  "_id": "test4",
+  "category": "other",
+  "price": 20,
+  "title": "AA Batteries",
+  "imagePath": "/pics/4.jpg",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet tellus velit, ut semper neque.",
+  "location":"scarborough",
+  "date":"2016/03/12",
+  "posterID" : 3,
+  "buyerID" : null
+}
+{
+  "_id": "test5",
+  "category": "electronic",
+  "price": 30,
+  "title": "Red Cable",
+  "imagePath": "/pics/5.jpg",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet tellus velit, ut semper neque.",
+  "location":"mississauga",
+  "date":"2016/04/01",
+  "posterID" : 2,
+  "buyerID" : null
+}
+{
+  "_id": "test6",
+  "category": "electronic",
+  "price": 10,
+  "title": "Phone Cable",
+  "imagePath": "/pics/6.jpg",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet tellus velit, ut semper neque.",
+  "location":"scarborough",
+  "date":"2016/04/12",
+  "posterID" : 3,
+  "buyerID" : null
+}
+{
+"_id": "test7",  
+  "category": "computer",
+  "price": 400,
+  "title": "Computer Fan",
+  "imagePath": "/pics/7.jpg",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet tellus velit, ut semper neque.",
+  "location":"toronto",
+  "date":"2016/04/12",
+  "posterID" : 1,
+  "buyerID" : null
+}
+{
+  "_id": "test8",
+  "category": "computer",
+  "price": 80,
+  "title": "Keyboard Set",
+  "imagePath": "/pics/8.jpg",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet tellus velit, ut semper neque.",
+  "location":"toronto",
+  "date":"2016/04/12",
+  "posterID" : 1,
+  "buyerID" : null
+}
+{
+  "_id": "test9",
+  "category": "other",
+  "price": 40,
+  "title": "Cleaning Stuff",
+  "imagePath": "/pics/9.jpg",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet tellus velit, ut semper neque.",
+  "location":"mississauga",
+  "date":"2016/04/29",
+  "posterID" : 2,
+  "buyerID" : null
+}
+{
+  "_id": "test10",
+  "category": "computer",
+  "price": 250,
+  "title": "Samsung SSD",
+  "imagePath": "/pics/10.jpg",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet tellus velit, ut semper neque.",
+  "location":"scarborough",
+  "date":"2016/05/01",
+  "posterID" : 3,
+  "buyerID" : null
+}
+{
+  "_id": "test11",
+  "category": "other",
+  "price": 350,
+  "title": "Airpods Wireless",
+  "imagePath": "/pics/11.jpg",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet tellus velit, ut semper neque.",
+  "location":"toronto",
+  "date":"2016/05/02",
+  "posterID" : 1,
+  "buyerID" : null
+}
+{
+  "_id": "test12",
+  "category": "other",
+  "price": 100,
+  "title": "Death Wish Coffee",
+  "imagePath": "/pics/14.jpg",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet tellus velit, ut semper neque.",
+  "location":"toronto",
+  "date":"2016/06/13",
+  "posterID" : 1,
+  "buyerID" : null
+}
+{
+  "_id": "test13",
+  "category": "toy",
+  "price": 13,
+  "title": "Blueberry Unicorn",
+  "imagePath": "/pics/20.jpg",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet tellus velit, ut semper neque.",
+  "location":"scarborough",
+  "date":"2016/06/15",
+  "posterID" : 3,
+  "buyerID" : null
+}
+{
+  "_id": "test14",
+  "category": "ticket",
+  "price": 6,
+  "title": "Raffle Tickets",
+  "imagePath": "/pics/21.jpg",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet tellus velit, ut semper neque.",
+  "location":"toronto",
+  "date":"2016/06/21",
+  "posterID" : 1,
+  "buyerID" : null
+}
+{
+  "_id": "test15",
+  "category": "book",
+  "price": 11,
+  "title": "Milk and Honey",
+  "imagePath": "/pics/22.jpg",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet tellus velit, ut semper neque.",
+  "location":"toronto",
+  "date":"2016/07/01",
+  "posterID" : 1,
+  "buyerID" : null
+}

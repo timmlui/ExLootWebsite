@@ -1,0 +1,183 @@
+
+<!-- https://codepen.io/bradfrost/pen/ykalp -->
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>ExLoot</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="search.css">
+    <link rel="stylesheet" href="http://bradfrost.github.com/this-is-responsive/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css"> -->
+
+    <!-- External Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  </head>
+
+  <body>
+
+     <!-- Menu Bar -->
+    <header class="header col-12">
+
+<a class="title col-2" onclick="home()"><h2>ExLoot</h2></a>
+
+      <div class="col-7">
+        <button class="searchButton col-2 fa fa-search" type="button" id="search"></button>
+        <form class="searchBar col-10">
+          <input src="js2.js" type="text" id="keyword" placeholder="Search...">
+        </form>
+      </div>
+          
+      <nav class="col-3 account">
+        <ul>
+          <li class="col-8 dropdown">
+
+           <a href="#" class="dropbtn">My Account</a>
+                        <div class="dropdown-content">
+                    <div id="but_edit_profie" class="hidden">
+                          <a class="col-12" class="hidden" >Edit Profile</a>
+                      </div>
+                    <div id="but_user_history" class="hidden">
+                          <a class="col-12" class="hidden" >History</a>
+                        </div>
+                    <div id="but_user_info" class="hidden">
+                          <a class="col-12" id="but_user_info" class="hidden" >Information</a>
+                      </div>
+                    <div id="but_log_in" class="hidden">
+                          <a class="col-12" id="but_log_in" class="hidden" >Log in</a>
+                        </div>
+                    <div id="but_sign_up" class="hidden">
+                          <a class="col-12" id="but_sign_up" class="hidden" >sign up</a>
+                        </div>
+                    <div id="but_log_out" class="hidden">
+                          <a class="col-12"  class="hidden"> Log Out</a>
+                        </div>
+                        </div>
+                        
+                  </li>
+                  <div id="new_post" class="hidden">
+                  <li class="col-4"><a class="col-4 postbtn" onclick="newPost()">Post</a></li>
+              </div>
+        </ul>
+      </nav>
+    </header>
+
+      
+   <!-- ********************************Filters********************************  -->
+    <!-- <main id='search_div'></main> -->
+
+    <div class="filters col-12">
+
+      <div class="location col-3">
+        <h2>Location</h2>
+        <div class="button-group1" align="center">
+            <button id="any" class="button ischecked" onclick="filter('.button-group1', this);filterResults('any')">Any</button>
+            <button id="toronto" class="button" onclick="filter('.button-group1', this);filterResults('location=toronto')">Toronto</button>
+            <button id="mississauga" class="button" onclick="filter('.button-group1', this);filterResults('location=mississauga')">Mississauga</button>
+            <button id="scarborough" class="button" onclick="filter('.button-group1', this);filterResults('location=scarborough')">Scarborough</button>
+        </div>
+      </div>
+        
+      <div class="price col-3">
+        <h2>Price</h2>
+        <div class="button-group2" align="center">
+            <button id="any" class="any button ischecked" onclick="filter('.button-group2', this)">Any</button>
+            <button id="lowPrice" class="button" onclick="filter('.button-group2', this);uncheck('.button-group4');filterResults('price=1')">Lowest</button>
+            <button id="highPrice" class="button" onclick="filter('.button-group2', this);uncheck('.button-group4');filterResults('price=-1')">Highest</button>
+        </div>
+      </div>
+        
+      <div class="rating col-3">
+        <h2>Seller Rating</h2>
+        <div class="button-group3" align="center">
+            <button id="any" class="any button ischecked" onclick="filter('.button-group3', this)">Any</button>
+            <button id="highRating" class="button" onclick="filter('.button-group3', this);uncheck('.button-group4')">Highest</button>
+            <button id="lowRating" class="button" onclick="filter('.button-group3', this);uncheck('.button-group4')">Lowest</button>
+        </div>
+      </div>
+
+      <div class="sort col-3">
+        <h2>sort by</h2>
+        <div class="button-group4" align="center">
+          <button id="views" class="button" onclick="filter('.button-group4', this);uncheck('.button-group2');uncheck('.button-group3');filterResults('view=-1')">Most Viewed</button>
+          <button id="new" class="button" onclick="filter('.button-group4', this);uncheck('.button-group2');uncheck('.button-group3');filterResults('time=-1')">Newest</button>
+          <button id="old" class="button" onclick="filter('.button-group4', this);uncheck('.button-group2');uncheck('.button-group3');filterResults('time=1')">Oldest</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- <button class="apply" type="submit" >Apply Filter</button>  -->
+
+
+    <!-- ******************************** Item Listings ******************************** -->
+    <!-- http://bradfrost.github.com/this-is-responsive/patterns/images/fpo_square.png -->
+    <div id="search_results">
+      <ul class="list" id="search_results-list"></ul>
+    </div>
+
+    <div class="footer col-12"> 
+
+      <div class="part col-2"></div>
+
+      <div class="part col-2">ExLoot Information
+        <ul>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Privacy Poilicy</a></li>
+          <li><a href="#">Posting Policy</a></li>
+          <li><a href="#">Advertise with Us</a></li>
+          <li><a href="#">AdChoice</a></li>
+          </ul>
+      </div>
+
+      <div class="part col-2">ExLoot Support
+        <ul>
+          <li><a href="#">Help Desk</a></li>
+          <li><a href="#">Online Safety Tips</a></li>
+          <li><a href="#">Price Checker</a></li>
+        </ul>
+      </div>
+
+      <div class="part col-2">Explore ExLoot
+        <ul>
+          <li><a href="#">About ExLoot</a></li>
+          <li><a href="#">ExLoot Central</a></li>
+          <li><a href="#">ExLoot Member Benefits</a></li>
+          <li><a href="#">Careers</a></li>
+          </ul>
+      </div>
+
+      <div class="part col-2">Frequently Asked Questions
+        <ul>
+          <li><a href="#">How do I get more ad views?</a></li>
+          <li><a href="#">Where is my ExLoot Ad? I can't find it.</a></li>
+          <li><a href="#">How can I change my Ad?</a></li>
+          <li><a href="#">How do I delete my Ad?</a></li>
+        </ul>
+      </div>
+
+      <div class="part col-2"></div>
+
+    </div>
+
+<!--       <footer role="contentinfo">   
+        <div>
+          <nav id="menu">
+            <a href="http://bradfrost.github.com/this-is-responsive/patterns.html">&larr;More Responsive Patterns</a>
+          </nav>
+        </div>
+      </footer> -->
+
+    <!-- </div> -->
+
+    <script src="search.js"></script>
+    <script src="index.js"></script>
+
+  </body>
+</html>

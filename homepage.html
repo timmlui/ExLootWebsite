@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    <title>ExLoot</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="http://bradfrost.github.com/this-is-responsive/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css"> -->
+
+    <!-- External Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  </head>
+
+    <body onLoad="getMostViewed()">
+
+        <!-- Menu Bar -->
+    <header class="header col-12">
+
+      <a class="title col-2" onclick="home()"><h2>ExLoot</h2></a>
+
+      <div class="col-7">
+        <button class="searchButton col-2 fa fa-search" type="button" id="search"></button>
+        <form class="searchBar col-10">
+          <input src="js2.js" type="text" id="keyword" placeholder="Search...">
+        </form>
+      </div>
+          
+      <nav class="col-3 account">
+        <ul>
+          <li class="col-8 dropdown">
+
+           <a href="#" class="dropbtn">My Account</a>
+                        <div class="dropdown-content">
+                    <div id="but_edit_profie" class="hidden">
+                          <a class="col-12" class="hidden" >Edit Profile</a>
+                      </div>
+                    <div id="but_user_history" class="hidden">
+                          <a class="col-12" class="hidden" >History</a>
+                        </div>
+                    <div id="but_user_info" class="hidden">
+                          <a class="col-12" id="but_user_info" class="hidden" >Information</a>
+                      </div>
+                    <div id="but_log_in" class="hidden">
+                          <a class="col-12" id="but_log_in" class="hidden" >Log in</a>
+                        </div>
+                    <div id="but_sign_up" class="hidden">
+                          <a class="col-12" id="but_sign_up" class="hidden" >sign up</a>
+                        </div>
+                    <div id="but_log_out" class="hidden">
+                          <a class="col-12"  class="hidden"> Log Out</a>
+                        </div>
+                        </div>
+                        
+                  </li>
+                  <div id="new_post" class="hidden">
+                  <li class="col-4"><a class="col-4 postbtn" onclick="newPost()">Post</a></li>
+              </div>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="main col-12">
+
+        <nav class="col-3 menu">
+
+                <ul>
+                    <li><a onclick="filterCategory('art')">art, collectibles</a></li>
+                    <li><a onclick="filterCategory('audio')">audio</a></li>
+                    <li><a onclick="filterCategory('baby')">baby items</a></li>
+                    <li><a onclick="filterCategory('bike')">bikes</a></li>
+                    <li><a onclick="filterCategory('book')">books</a></li>
+                    <li><a onclick="filterCategory('business')">business, industrial</a></li>
+                    <li><a href="#">cameras, camcorders</a></li>
+                    <li><a href="#">cds, dvds, blu-ray</a></li>
+                    <li><a href="#">clothing</a></li>
+                    <li><a onclick="filterCategory('computer')">computers</a></li>
+                    <li><a href="#">computer accessories</a></li>
+                    <li><a onclick="filterCategory('electronic')">electronics</a></li>
+                    <li><a href="#">musical instruments</a></li>
+                    <li><a href="#">sporting goods, exercise</a></li>
+                    <li><a onclick="filterCategory('ticket')">tickets</a></li>
+                    <li><a href="#">tools</a></li>
+                    <li><a onclick="filterCategory('toy')">toys, games</a></li>
+                    <li><a href="#">TVs, video</a></li>
+                    <li><a href="#">video games, consoles</a></li>
+                    <li><a onclick="filterCategory('other')">other</a></li>
+                </ul>
+        </nav>
+
+        <div class="col-9">
+
+            <h2>Most popular</h2>
+            <div id="container">
+
+            </div>
+
+            
+            <h2>Recently viewed</h2>
+            <div class="scrollmenu">
+                <a href="#"><img src="pics/10.jpg"/></a>
+                <a href="#"><img src="pics/2.jpg"/></a>
+                <a href="#"><img src="pics/3.jpg"/></a>
+                <a href="#"><img src="pics/7.jpg" /></a>
+                <a href="#"><img src="pics/5.jpg"/></a>
+                <a href="#"><img src="pics/6.jpg"/></a>
+                <a href="#"><img src="pics/9.jpg"/></a>
+                <a href="#"><img src="pics/1.jpg"/></a>
+                <a href="#"><img src="pics/4.jpg"/></a>
+                <a href="#"><img src="pics/8.jpg"/></a>
+            </div>
+        </div>
+
+    </div> <!-- main -->
+     <script src="homepage.js"></script>
+    <script src="search.js"></script>
+    <script src="posts.js"></script>
+    </body>
+
+</html>

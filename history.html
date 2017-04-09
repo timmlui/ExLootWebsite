@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="history.js"></script>
+    <!-- <meta name="author" content="Benett Axtell"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History</title>
+  </head>
+  <body>
+    <head>
+        <title>ExLoot</title>
+        <link rel="stylesheet" href="homepage.css">
+    </head>
+
+    <body>
+        <header class="col-12 header"> 
+<a class="title col-2" onclick="home()"><h2>ExLoot</h2></a>
+            <div class="col-7">
+                <button id="searchButton" type="button" class="col-2">Search</button>
+                <form id="searchBar" class="col-10">
+                    <input background-image="pics/search.png" type="text" name="search" placeholder="Search..">
+                </form>
+            </div>
+              
+            <nav class="col-3 account">
+               <ul>
+                  <li class="col-8 dropdown">
+                        <a href="#" class="dropbtn">My Account</a>
+                        <div class="dropdown-content">
+                    <div id="but_edit_profie" class="hidden">
+                          <a class="col-12" class="hidden" >Edit Profile</a>
+                      </div>
+                    <div id="but_user_history" class="hidden">
+                          <a class="col-12" class="hidden" >History</a>
+                        </div>
+                    <div id="but_user_info" class="hidden">
+                          <a class="col-12" id="but_user_info" class="hidden" >Information</a>
+                      </div>
+                    <div id="but_log_in" class="hidden">
+                          <a class="col-12" id="but_log_in" class="hidden" >Log in</a>
+                        </div>
+                    <div id="but_log_out" class="hidden">
+                          <a class="col-12"  class="hidden"> Log Out</a>
+                        </div>
+                        </div>
+                        
+                  </li>
+                  <div id="new_post" class="hidden">
+                  <li class="col-4"><a href="newpost.html">Post</a></li>
+              </div>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="col-12 buy-his">
+          <h3> My History</h3>
+        </div>
+
+        <div class="col-12 filter_bar"> Sort By
+            <select name="sortByName" id="SortFiled" tabindex="-1">
+              <option value="1" >Newest First</option>
+              <option value="2" >Oldest First</option>
+              <option value="3" >Lowest Price</option>
+              <option value="4" selected>Highest Price</option>
+            </select>
+            <input type="button" id="show_results" value="Show History"/>
+        </div>  
+
+
+        <div class="col-12" id="display_history">
+  <link rel="stylesheet" type="text/css" href="history.css" media="screen" />
+  </body>
+</html>

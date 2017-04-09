@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ExLoot_Log</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+    <section class="item's_description col-12">
+        <!-- Menu Bar -->
+        <header class="header col-12">
+
+            <h2 class="title col-2">EXLOOT</h2>
+
+            <div class="col-7">
+                <button class="searchButton col-2" type="button">Search</button>
+                <form class="searchBar col-10">
+                    <input background-image="pics/search.png" type="text" name="search" placeholder="Search...">
+                </form>
+            </div>
+
+        </header>
+
+        <div class="register">
+            <form action="/users" method="post">
+                <div class="container">
+                    <label><b>Username</b></label>
+                    <input id="uname" type="text" placeholder="Enter Username" name="username" required>
+
+                    <label><b>Password</b></label>
+                    <input id="psw" type="password" placeholder="Enter Password" name="password" required>
+
+                    <label><b>Phone</b></label>
+                    <input id="pnumber" type="text" placeholder="Enter Phone Number" name="phoneNumber" required>
+
+                    <label><b>Email</b></label>
+                    <input id="email" type="text" placeholder="Enter Email" name="email" required>
+
+                    <button id="register_b" type="submit">Register</button>
+                </div>
+
+                <div class="container" style="background-color:#f1f1f1">
+                    <button  onclick="location.href='homepage.html'" id="register_b" type="button" class="cancelbtn">Cancel</button>
+                </div>
+            </form>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
+        </script>
+        <script>
+            $('#register_b').click(function(e) {
+                e.preventDefault();
+                $.ajax({
+                    type: 'POST',
+                    url: "/users",
+                    dataType: "json",
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify({
+                        "email": $("#email").val(),
+                        "username": $("#uname").val(),
+                        "password": $("#psw").val(),
+                        "phoneNumber": $("#pnumber").val()
+                    }),
+                    success: function(data) {
+                        if (data) {
+                            var userid = data.userID;
+                            var url = "homepage.html";
+                            window.location.href = url;
+                        } else {
+                            window.open("FAILED");
+                        }
+                    },
+                    error: function(error){
+                        alert("Email Already Registered");
+                    }
+                });
+            })
+        </script>
+</body>
+
+</html>

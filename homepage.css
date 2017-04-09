@@ -1,0 +1,307 @@
+@import url(font-awesome.min.css);
+
+* {
+  box-sizing: border-box;
+  transition-duration: 0.4s;
+}
+html {
+  font-family: sans-serif;
+}
+button {
+  cursor: pointer;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+    width: 100%;
+}
+.hidden{
+  display: none;
+}
+
+/*****************************TITLE + SEARCH****************************/
+
+header {
+  background-color: #181818;
+}
+.title {
+  text-align: center;
+  display: block;
+  line-height: 50px;
+  color: white;
+  background: #181818;
+  text-decoration: none;
+  padding: 8px;
+}
+.title:hover {
+  transition-duration: 0s;
+  color: grey;
+}
+.searchBar{
+   margin: 0px;
+   width: 80%;
+   float: left;
+}
+/*.fa {
+  color: white;
+}*/
+.searchButton{
+  font-family: sans-serif;
+  color: white;
+  margin-top: 14px;
+  border: 2px solid #3f3c3c;
+  border-radius: 4px;
+  background-color: #4c4b4b;
+  float: left;
+  width: 20%;
+}
+.searchButton:hover {
+  background-color: #262424;
+}
+input[type=text] {
+    width: 130px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+input[type=text]:focus {
+    width: 100%;
+}
+
+/**********************************MENU**********************************/
+
+.account ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 5px;
+}
+.account li {
+  text-align: center;
+  padding: 0px;
+  border: 2px solid #3f3c3c;
+  margin-top: 10px;
+  background-color: #4c4b4b;
+  /*box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);*/
+}
+.account li:hover {
+  background-color: #262424;
+  cursor: pointer;
+}
+.account li a {
+  display: inline-block;
+  text-align: center;
+  padding: 15px 5px;
+  text-decoration: none;
+  color: white;
+}
+.dropdown-content a:hover {
+  background-color: #262424;
+}
+.account li.dropdown {
+  display: inline-block;
+}
+.dropdown-content {
+  background-color: #4c4b4b;
+  display: none;
+  position: absolute;
+  border: 2px solid #3f3c3c;
+  /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
+  /*z-index: 1;*/
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.postbtn {
+  float: none;
+}
+
+
+/******************************************************/
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.menu li {
+    text-align: center;
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color: #e9ece5;
+    color: #3b3a36;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    cursor: pointer;
+}
+.menu li:hover {
+    background-color: #b3c2bf;
+}
+
+
+/*********************************************************************************/
+#container {
+    overflow: hidden;
+}
+
+/*photobanner*/
+
+.photobanner {
+    height: 233px;
+    width: 3550px;
+}
+
+/*keyframe animations*/
+.first {
+    -webkit-animation: bannermove 30s linear infinite;
+       -moz-animation: bannermove 30s linear infinite;
+        -ms-animation: bannermove 30s linear infinite;
+         -o-animation: bannermove 30s linear infinite;
+            animation: bannermove 30s linear infinite;
+}
+
+@keyframes "bannermove" {
+ 0% {
+    margin-left: 0px;
+ }
+ 100% {
+    margin-left: -2125px;
+ }
+
+}
+
+@-moz-keyframes bannermove {
+ 0% {
+   margin-left: 0px;
+ }
+ 100% {
+   margin-left: -2125px;
+ }
+
+}
+
+@-webkit-keyframes "bannermove" {
+ 0% {
+   margin-left: 0px;
+ }
+ 100% {
+   margin-left: -2125px;
+ }
+
+}
+
+@-ms-keyframes "bannermove" {
+ 0% {
+   margin-left: 0px;
+ }
+ 100% {
+   margin-left: -2125px;
+ }
+
+}
+
+@-o-keyframes "bannermove" {
+ 0% {
+   margin-left: 0px;
+ }
+ 100% {
+   margin-left: -2125px;
+ }
+
+}
+
+.photobanner img {
+    padding-top: 10px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.photobanner img:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    cursor: pointer;
+
+    -webkit-box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+    box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+}
+
+/*******************************************************************************/
+div.scrollmenu {
+    overflow: auto;
+    white-space: nowrap;
+}
+
+div.scrollmenu a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+    background-color: #777;
+}
+
+/******************************************************************************/
+input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}
+/******************************************************************************/
+
+
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}

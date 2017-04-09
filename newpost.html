@@ -1,0 +1,116 @@
+<html>
+    <head>
+        <title>ExLoot</title>
+        <link rel="stylesheet" href="newpost.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="newpost.js"></script>
+    </head>
+<body onload="fillPostInfo()">
+     <!-- Menu Bar -->
+    <header class="header col-12">
+
+<a class="title col-2" onclick="home()"><h2>ExLoot</h2></a>
+
+      <div class="col-7">
+        <button class="searchButton col-2 fa fa-search" type="button" id="search"></button>
+        <form class="searchBar col-10">
+          <input src="js2.js" type="text" id="keyword" placeholder="Search...">
+        </form>
+      </div>
+          
+      <nav class="col-3 account">
+        <ul>
+          <li class="col-8 dropdown">
+
+           <a href="#" class="dropbtn">My Account</a>
+                        <div class="dropdown-content">
+                    <div id="but_edit_profie" class="hidden">
+                          <a class="col-12" class="hidden" >Edit Profile</a>
+                      </div>
+                    <div id="but_user_history" class="hidden">
+                          <a class="col-12" class="hidden" >History</a>
+                        </div>
+                    <div id="but_user_info" class="hidden">
+                          <a class="col-12" id="but_user_info" class="hidden" >Information</a>
+                      </div>
+                    <div id="but_log_in" class="hidden">
+                          <a class="col-12" id="but_log_in" class="hidden" >Log in</a>
+                        </div>
+                    <div id="but_sign_up" class="hidden">
+                          <a class="col-12" id="but_sign_up" class="hidden" >sign up</a>
+                        </div>
+                    <div id="but_log_out" class="hidden">
+                          <a class="col-12"  class="hidden"> Log Out</a>
+                        </div>
+                        </div>
+                        
+                  </li>
+                  <div id="new_post" class="hidden">
+                  <li class="col-4"><a class="col-4 postbtn" onclick="newPost()">Post</a></li>
+              </div>
+        </ul>
+      </nav>
+    </header>
+
+
+
+<div class="col-2"></div>
+<div class="col-8 details">
+    <h2>Contact Infomation</h2>
+   <form>
+				  Phone Number:*<br>
+				  <p id="phone"></p><br>
+				  Email:*<br>
+				  <p id="email"></p>
+				</form>
+
+  <h2>Ad Detail</h2>
+  Catagory:<br>
+  <select id="category">
+		<option value="art">art, collectibles</option>
+		<option value="audio">audio</option>
+		<option value="baby">baby items</option>
+		<option value="bike">bikes</option>
+		<option value="book">books</option>
+		<option value="business">business, industrial</option>
+		<option value="camera">cameras, camcorders</option>
+		<option value="cd">cds, dvds, blu-ray</option>
+		<option value="clothing">clothing</option>
+		<option value="computer">computers</option>
+		<option value="accessory">computer accessories</option>
+		<option value="electronic">electronics</option>
+		<option value="instrument">musical instruments</option>
+		<option value="sporting">sporting goods, exercise</option>
+		<option value="ticket">tickets</option>
+		<option value="tool">tools</option>
+		<option value="toy">toys, games</option>
+		<option value="TV">TVs, video</option>
+		<option value="game">video games, consoles</option>
+		<option value="other">other</option>
+	</select>
+
+	<form>
+				  <br>Price:*<br>
+				  <input type="text" id="price" required><br>
+				    Ad Title:*<br>
+				  <input type="text" id="title" required><br>
+				    Description:<br>
+				    <textarea id="description" style="width:100%" rows="10"></textarea><br><br>
+				    Location:<br>
+				  <input type="text" id="location"><br>
+				</form>
+
+<h2>Image</h2>
+	<form>
+    Select image to upload:
+    <input type="file" onchange="previewFile()" id="fileToUpload">
+</form>
+
+<img src="" height="200" alt="Image preview...">
+<br>
+
+<button class="postButton" type="button" onclick="createPost()">Post!</button>
+</div>
+<div class="col-2"></div>
+ </body>
+</html>

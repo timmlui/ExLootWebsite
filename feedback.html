@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!-- <meta name="author" content="Benett Axtell"> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script src="feedback.js"></script>
+		<title>Feedback</title>
+	</head>
+	<body>
+		<head>
+        <title>ExLoot</title>
+        <link rel="stylesheet" href="homepage.css">
+    </head>
+
+          <!-- Menu Bar -->
+    <header class="header col-12">
+
+<a class="title col-2" onclick="home()"><h2>ExLoot</h2></a>
+      <div class="col-7">
+        <button class="searchButton col-2 fa fa-search" type="button" id="search"></button>
+        <form class="searchBar col-10">
+          <input src="js2.js" type="text" id="keyword" placeholder="Search...">
+        </form>
+      </div>
+          
+      <nav class="col-3 account">
+        <ul>
+          <li class="col-8 dropdown">
+
+           <a href="#" class="dropbtn">My Account</a>
+                        <div class="dropdown-content">
+                    <div id="but_edit_profie" class="hidden">
+                          <a class="col-12" class="hidden" >Edit Profile</a>
+                      </div>
+                    <div id="but_user_history" class="hidden">
+                          <a class="col-12" class="hidden" >History</a>
+                        </div>
+                    <div id="but_user_info" class="hidden">
+                          <a class="col-12" id="but_user_info" class="hidden" >Information</a>
+                      </div>
+                    <div id="but_log_in" class="hidden">
+                          <a class="col-12" id="but_log_in" class="hidden" >Log in</a>
+                        </div>
+                    <div id="but_sign_up" class="hidden">
+                          <a class="col-12" id="but_sign_up" class="hidden" >sign up</a>
+                        </div>
+                    <div id="but_log_out" class="hidden">
+                          <a class="col-12"  class="hidden"> Log Out</a>
+                        </div>
+                        </div>
+                        
+                  </li>
+                  <div id="new_post" class="hidden">
+                  <li class="col-4"><a class="col-4 postbtn" onclick="newPost()">Post</a></li>
+              </div>
+        </ul>
+      </nav>
+    </header>
+
+		<div class="col-12 col-m-12 rate_all">
+			<div class="col-12" id="display_post_info">
+				<p id="show_title"></p>
+				<p id="show_rating"></p>
+				<p id="show_description"></p>
+				<p id="show_price"></p>
+				<p id="show_category"></p>
+			</div>
+			<div class="col-12 col-m-12 rate_post">
+				<!-- <img class="col-6 col-m-6 post_photo" alt="post" src="pics/12.png"> -->
+				<div class="col-12 col-m-6 rate_comment">
+					<p class="col-12 star">Rate the Item</p>
+					<div class='col-12 rating' id="ra">
+					<input type='radio' name='rating_p' value='0'  />0<span id="hide"></span>
+					<input type='radio' name='rating_P' value='1' /><span>1</span>
+					<input type='radio' name='rating_p' value='2' /><span>2</span>
+					<input type='radio' name='rating_p' value='3' /><span>3</span>
+					<input type='radio' name='rating_p' value='4' /><span>4</span>
+					<input type='radio' name='rating_p' value='5' checked/><span>5</span>
+					</div>
+					<p class="col-12 comment"><b>Comment:</b></p>
+					<textarea name='sellor comment' class="col-12 text_post" placeholder='Share a comment about this
+					sellor ...' class="form-control" rows='4'></textarea>
+				</div>
+			</div>
+<!-- 			<div class="col-6 col-m-12 rate_poster">
+				<img class="col-6 col-m-6 post_photo" alt="post" src="pics/12.png">
+				<div class="col-6 col-m-6 rate_comment">
+					<p class="col-12 star">Rate the Poster</p>
+					<div class='col-12 rating'>
+					<input type='radio' name='rating_u' value='0' checked />0<span id="hide"></span>
+					<input type='radio' name='rating_u' value='1' /><span>1</span>
+					<input type='radio' name='rating_u' value='2' /><span>2</span>
+					<input type='radio' name='rating_u' value='3' /><span>3</span>
+					<input type='radio' name='rating_u' value='4' /><span>4</span>
+					<input type='radio' name='rating_u' value='5' /><span>5</span>
+					</div>
+					<p class="col-12 comment"><b>Comment:</b></p>
+					<textarea name='sellor comment' class="col-12 text_post" placeholder='Share a comment about this
+					sellor ...' class="form-control" rows='4'></textarea>
+				</div>
+			</div> -->
+		</div>
+		<br>
+		<button type = 'submit' class="col-4 submit" id="submit_rating">Submit</button>	
+		<link rel="stylesheet" type="text/css" href="feedback.css" media="screen" />
+	</body>
+</html>

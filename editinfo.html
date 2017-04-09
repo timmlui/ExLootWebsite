@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!-- <meta name="author" content="Benett Axtell"> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script src="editinfo.js"></script>
+
+		<title>Edit PersonalInfo</title>
+	</head>
+	<body>
+		<head>
+        <title>ExLoot</title>
+        <link rel="stylesheet" href="homepage.css">
+    </head>
+  <!-- Menu Bar -->
+    <header class="header col-12">
+
+<a class="title col-2" onclick="home()"><h2>ExLoot</h2></a>
+
+      <div class="col-7">
+        <button class="searchButton col-2 fa fa-search" type="button" id="search"></button>
+        <form class="searchBar col-10">
+          <input src="js2.js" type="text" id="keyword" placeholder="Search...">
+        </form>
+      </div>
+          
+      <nav class="col-3 account">
+        <ul>
+          <li class="col-8 dropdown">
+
+           <a href="#" class="dropbtn">My Account</a>
+                        <div class="dropdown-content">
+                    <div id="but_edit_profie" class="hidden">
+                          <a class="col-12" class="hidden" >Edit Profile</a>
+                      </div>
+                    <div id="but_user_history" class="hidden">
+                          <a class="col-12" class="hidden" >History</a>
+                        </div>
+                    <div id="but_user_info" class="hidden">
+                          <a class="col-12" id="but_user_info" class="hidden" >Information</a>
+                      </div>
+                    <div id="but_log_in" class="hidden">
+                          <a class="col-12" id="but_log_in" class="hidden" >Log in</a>
+                        </div>
+                    <div id="but_sign_up" class="hidden">
+                          <a class="col-12" id="but_sign_up" class="hidden" >sign up</a>
+                        </div>
+                    <div id="but_log_out" class="hidden">
+                          <a class="col-12"  class="hidden"> Log Out</a>
+                        </div>
+                        </div>
+                        
+                  </li>
+                  <div id="new_post" class="hidden">
+                  <li class="col-4"><a class="col-4 postbtn" onclick="newPost()">Post</a></li>
+              </div>
+        </ul>
+      </nav>
+    </header>
+
+
+	<main class='edit_info'>
+	<!-- <p id="e_title">Edit Personal Info</p> -->
+	<div class="col-12" id="edit">
+		<div class="col-3 photo">	
+		<!-- <section id='name_photo' class="col-3"> -->
+			<img class='profile_pic col-12' alt='Photo' src='pics/12.png'/>	
+			<button class="col-6 submit">Update Photo</button>
+		</div>
+		<!-- </section> -->
+		<section class='col-6 edit_part'>
+			<div class="info">User Name:</div>
+			<input class="i" type='text' id="ud_username" placeholder='Enter the user name' required ></input>
+			<div class='info'>Email:</div>
+			<p id="show_email"></p>
+<!-- 			<div class='info'>Current Password:</div>
+			<input class= "i" type='password'  placeholder='Enter current password' required></input> -->
+			<div class='info'>New Password:</div>
+			<input class= "i" type='password' id="ud_pw" placeholder='Enter new password' required></input>
+			<div class='info'>Confirm Password:</div>
+			<input class= "i" type='password' id="ud_confirm_pw" placeholder='Enter password again' required></input>
+			<div class='info'>New PhoneNumber:</div>
+			<div><input type="text" name="phone" id="ud_new_phone" pattern="\(?\d{3}\)?-?\d{3}-?\d{4}" required></div>
+			<div class='submit'>
+			<button class="col-4"id="submit_info">Submit</button>
+			</div>
+		</section>
+	</div>	
+	<link rel="stylesheet" type="text/css" href="editinfo.css" media="screen" />
+	</body>
+</html>
