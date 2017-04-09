@@ -3,6 +3,7 @@ Item Exchange Site
 
 UofT group project
 First experience on making a website https://exloot.herokuapp.com/
+Responsible for the search/search results features and interface
 
 run:
 -node install
